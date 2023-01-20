@@ -1,0 +1,28 @@
+.contener{
+
+
+  
+  
+  
+}
+
+
+
+  .content{
+
+    font-style: oblique;  
+    align-items: center;
+    color: aliceblue;
+    padding-left: 20%;
+  
+    padding-top: 30%;
+  }
+
+  .btn1{
+    height: 50px;
+    width: 2cm;
+   
+   position: relative;
+   left: 150px;
+    top:2px; 
+  }
