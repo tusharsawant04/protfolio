@@ -1,60 +1,35 @@
-*, *::before, *::after {
-        margin: 0;
-        padding: 0;
-      }
-      
-      body {
-        background: #333;
-        color: #f2f2f2;
-        min-height: 100%;
-        min-width: 100%;
-      }
-      
-      .contan {
-        grid-column: auto, auto,auto;
-        width: 90%;
-        margin: auto;
-      }
-      
-      .cards-container {
-        display: flex;
-        border-radius: 6px;
-        color: #333;
-        background: #eee;
-        padding: 1rem;
-        box-shadow: 0 0 1rem #000 inset;
-        overflow-x: auto;
-        position: relative;
-        
-   
-      }
-      
-      .card {
-        flex: 1 0 250px;
-        box-shadow: 0 1px 1rem -4px #000;
-        background: #fff;
-        margin: 1rem;
-        overflow: hidden;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: all 250ms ease-in-out;
-    
-      }
-      
-      .card-content {
-        padding: 1rem;
-      }
-      
-      @media screen and (max-width: 625px) {
-        .container {
-          width: 100%
-        }
-        
-        .cards-container {
-          padding: .5rem;
-        }
-        
-        .card {
-          margin: .5rem;
-        }
-      }
+.skill-details {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.skill-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.skill-bar {
+  width: 300px;
+  margin: 10px;
+}
+
+.skill-name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.skill-progress {
+  position: relative;
+}
+
+.skill-value {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #fff;
+}

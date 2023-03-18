@@ -1,50 +1,65 @@
 
 
 import React from 'react';
-import Navbar from '../component/Navbar';
-import ts from '../assests/ts.jpg';
 
 import'./project.css';
 import 'react-slideshow-image/dist/styles.css'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-
-import SimpleImageSlider from "react-simple-image-slider";
 
 
-const images = [
-  { url:require("../assests/p11.png") },
-  { url: require("../assests/p12.png") },
-  { url: require("../assests/p13.png") },
-  { url: require("../assests/p14.png" )},
-  { url: require("../assests/p15.png" )},
-  { url: require("../assests/p16.png" )}
-  
-];
+const projects = [ 
+  { 
+  title: 'My Project',
+  description: 'A project I created using React',
+  image: require('../assests/p11.png'),
+  date: 'March 2023',
+  technologies: 'React, JavaScript, HTML, CSS',
+  link: 'https://example.com/my-project'
+  },
+  { 
+    title: 'My Project',
+    description: 'A project I created using React',
+    image: 'https://example.com/my-project-image.jpg',
+    date: 'March 2023',
+    technologies: 'React, JavaScript, HTML, CSS',
+    link: 'https://example.com/my-project'
+    },
+
+]
+
+
 
 const Project = () => {
-    return (
-      <>
-      projects
-      <div className='s1'>
-       
-      <div className='slide'>
-      <SimpleImageSlider
-        width={350}
-        height={300}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-      />
+  return (
+    <>
+    <div className="flex-container">
+    {projects.map((projects, index) => {
+      return (
+        <div className="project-page">
+          <div className="project-header">
+            <h1>{projects.title}</h1>
+            <p>{projects.description}</p>
+          </div>
+          <div className="project-image">
+            <img src={projects.image} alt={projects.title} />
+          </div>
+          <div className="project-details">
+            <h2>Details</h2>
+            <ul>
+              <li><strong>Date:</strong> {projects.date}</li>
+              <li><strong>Technologies:</strong> {projects.technologies}</li>
+              <li><strong>Link:</strong> <a href={projects.link} target="_blank" rel="noopener noreferrer">{projects.link}</a></li>
+            </ul>
+          </div>
         </div>
-        <div className='s2'>
-          <p>1   Ecommerse </p>
-        </div>
-      </div>
-      </>
-    )
+      );
+    })}
+    </div>
+    </>
+  );
 }
+
+
+
 
   
 export default Project;

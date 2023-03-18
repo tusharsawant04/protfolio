@@ -1,59 +1,77 @@
+import React, { Component } from 'react';
 
-
-import React from 'react';
 import Navbar from '../component/Navbar';
 import ts from '../assests/ts.jpg';
 import './edu.css';
 import tushar from '../assests/clogo.png';
+import { Doughnut } from 'react-chartjs-2';
+import {Chart, ArcElement} from 'chart.js'
 
-
-const Education = () => {
+class Education extends Component {
+  state = {
+    education: [
+      {
+        id: 1,
+        degree: 'Bachelor of Science in Computer Science',
+        university: 'University of XYZ',
+        year: '2018 - 2022',
+        percentage: '85%',
+        color: '#8e5ea2',
+      },
+      {
+        id: 2,
+        degree: 'Higher Secondary Education',
+        university: 'ABC School',
+        year: '2016 - 2018',
+        percentage: '88%',
+        color: '#3cba9f',
+      },
+      {
+        id: 3,
+        degree: 'Secondary Education',
+        university: 'DEF School',
+        year: '2011 - 2016',
+        percentage: '90%',
+        color: '#e8c3b9',
+      },
+    ],
+    chartData: {
+      labels: ['Bachelor of Science', 'Higher Secondary', 'Secondary'],
+      datasets: [
+        {
+          data: [85, 88, 90],
+          backgroundColor: ['#8e5ea2', '#3cba9f', '#e8c3b9'],
+        },
+      ],
+    },
+  }
+render= ()=> { 
   return (
-    <> 
-
-   <div className='contenered'>
+    <div>
   
-   <table>
-   <tr>
-    <th>  <img className='imgl' variant="center"  src={tushar} /> BACHLOR DEGREE COMPUTER ENGINEERING </th>
-    </tr> 
-    <tr>
-     <td> B.Tech</td>
-     <td>COMPUTER ENGINEERING</td>
-    </tr>
-    <tr>
-      <td>SJCEM</td>
-      <td>8.71 CGPI</td>
-    </tr>
+      <div className="education-details">
+        <h2>Education Details</h2>
+        <div className="education-cards">
+          {this.state.education.map((edu) => (
+            <div className="education-card" key={edu.id}>
+              <h3>{edu.degree}</h3>
+              <p>{edu.university}</p>
+              <p>{edu.year}</p>
+              <p>{edu.percentage}</p>
+            </div>
+          ))}
+        </div>
+     
+          
+       
+      </div>
+      </div>
+    
 
-    <tr>
-    <th>DIPLOMA </th>
-    </tr>
-    <tr>
-      <td>POLYTECHNIC DIPLOMA</td>
-      <td>COMPUTER ENGINEERING</td>
-    </tr>
-    <tr>
-      <td>VARTK POLLYTECHNIC </td>
-      <td>89.03%</td>
-    </tr>
-
-    <tr>
-    <th>SSC</th>
-    </tr>
-    <tr>
-      <td>MAHARASHTRA BOARD</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>A.V.S VIDDYAMANDIR </td>
-      <td>79.80%</td>
-    </tr>
-    </table> 
-
-    </div>
-    </>
   );
-};
+}
+  }
+
+
   
 export default Education;

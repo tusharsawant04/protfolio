@@ -14,13 +14,11 @@ body{
    background-size: cover;
    background-repeat: no-repeat;
   background-size: cover;
-    background-image: url(C:/Users/Tushar/Desktop/projects/portfolio/ts/src/assests/bg1.jpeg);
-    background-image: '../assests/bg1.jpg';
   
 }
 
 h1, h4,p,a{
-  color: rgb(97, 104, 110);
+  color: rgb(230, 233, 236);
   text-decoration: none;
 }
 
@@ -30,7 +28,7 @@ ul{
 }
 
 li{
-  color: #fff;
+  color: rgb(37, 37, 37);
 }
 
 .btn{

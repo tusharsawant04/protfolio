@@ -1,56 +1,35 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 100px;
-  }
-  
-  th {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: x-large;
-   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: x-large;
-    font-weight: 200;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   color: rgb(55, 56, 56);
-  }
-  .imgl{
-    width: 4rem;
-    height:14rem;
-     border-radius : 50%;
-     stroke: blue;
-     
-     bottom: auto;
- }
- 
-  
-  .contenered{
+.education-details {
+  text-align: center;
+  margin-top: 50px;
+}
 
+.education-cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
 
-    width: 100%;
-    padding: 40px;
-      padding-left:70px;
-      padding-right: 70px;
-      padding-bottom:60px;
-    font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      margin:30px;
-      margin-right:30px;
-      margin-bottom: 40px;
-    background-repeat: no-repeat;
-   
+.education-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
-    background-position: center center;
- width: auto;
+.education-card h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
 
- height: 100vh;
-  background-size: cover;
-      background-image: url(C:/Users/Tushar/Desktop/projects/portfolio/ts/src/assests/edubg.jpg);
-  }
+.education-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.education-chart {
+  width: 50%;
+  margin: 0 auto;
+}

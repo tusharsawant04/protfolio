@@ -9,58 +9,47 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
 
-  const [click, setClick]= useState(false);
+  const [navActive, setNavActive] = useState(false);
 
-  const handleClick=()=> setClick(!click);
+  const toggleNavActive = () => {
+    setNavActive(!navActive);
+  };
+  const closeNavActive = () => {
+    setNavActive(false);
+  };
 
+    return  (
 
-
-
-    return  <div className='header'>
-    <Link to="/">
-      <h1>ts</h1>
-    </Link>
-<ul className={click ?"nav-menu.active":"nav-menu"}>
-  
-
-  <li>
-    <Link to="/"><h4>Home</h4></Link>
-  </li>
-
-  <li>
-    <Link to="/project"><h4>project</h4></Link>
-  </li>
-
-  <li>
-    <Link to="/education"><h4>Education</h4></Link>
-  </li>
-
-  <li>
-    <Link to="/about"><h4>about</h4></Link>
-  </li>
-
-  <li>
-    <Link to="/skill"><h4>skill</h4></Link>
-  </li>
-
-  <li>
-    <Link to="/contact"><h4>contact</h4></Link>
-  </li>
-
-</ul>
-<div className='hamburger' onClick={handleClick}>
-  {click? (
-     <FaTimes size={20} style={{ccolor:"#fff"}} />
-     )
-  :(
-     <FaBars size={20} style={{ccolor:"#fff"}} />
-     )}
- 
-
-</div>
-
-  </div>
- 
+      <nav className="navbar">
+      <div className="logo">
+        <Link to="/">
+          <img src="path/to/logo.png" alt="Logo" />
+        </Link>
+      </div>
+      <ul className={`nav-links ${navActive ? 'nav-active' : ''}`}>
+        <li className="nav-item">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/skill">Skills</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/education">Education</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/project">project</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+      <div className="burger" onClick={toggleNavActive}>
+        <div className="line1"> </div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
+    );
   };
     
   export default Navbar;

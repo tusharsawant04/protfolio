@@ -1,28 +1,143 @@
-.contener{
-
-
-  
-  
-  
-}
-
-
-
-  .content{
-
-    font-style: oblique;  
-    align-items: center;
-    color: aliceblue;
-    padding-left: 20%;
-  
-    padding-top: 30%;
-  }
-
-  .btn1{
-    height: 50px;
-    width: 2cm;
+.front-page {
+    background-color: #282c34;
+    text-align: center;
    
-   position: relative;
-   left: 150px;
-    top:2px; 
   }
+  
+  .hero-section {
+    background-color: #282c34;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section p {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  
+  .hero-section button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-section button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .about-section {
+    background-color: #282c34;
+    margin-top: 100px;
+    padding: 50px 0;
+    color: #fff;
+  }
+  
+  .about-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-image {
+    width: 400px;
+    margin-right: 50px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .about-text {
+    width: 400px;
+    text-align: left;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .about-text button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .about-text button:hover {
+    background-color: #fff;
+    color: #333;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .hero-section {
+    height: 400px;
+    }
+    
+    .hero-section h1 {
+    font-size: 36px;
+    }
+    
+    .hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    }
+    
+    .about-section {
+    margin-top: 50px;
+    padding: 30px 0;
+    }
+    
+    .about-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    }
+    
+    .about-content {
+    flex-direction: column;
+    }
+    
+    .about-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+    }
+    
+    .about-image img {
+    max-width: 100%;
+    }
+    
+    .about-text {
+    width: 100%;
+    }
+    }
+   
+    
+    
