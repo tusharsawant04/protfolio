@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useRef }from 'react';
 import Navbar from '../component/Navbar';
-import ts from '../assests/ts.jpg';
+import ts from '../assests/tushar.jpg';
 import './home.css';
 import Heroimg from '../component/heroimg';
 import Contact from './contact';
@@ -11,17 +11,17 @@ import Skill from './skill';
 import Project from './project';
 
 const Home = () => {
- 
+  const homeRef = useRef(null);
 return (
  
     <div className="front-page">
-       <Navbar/>
+      
       <div className="hero-section">
         <h1>Welcome to My Portfolio Website</h1>
         <p>I am a full-stack developer based in [Your Location], and I love building awesome web applications.</p>
         <button>Learn More</button>
       </div>
-      <div className="about-section">
+      <div className="about-section" ref={homeRef}>
         <h2>About Me</h2>
         <div className="about-content">
           <div className="about-image">

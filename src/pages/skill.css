@@ -1,6 +1,7 @@
 .skill-details {
   text-align: center;
   margin-top: 50px;
+  
 }
 
 .skill-bars {
@@ -12,7 +13,7 @@
 
 .skill-bar {
   width: 300px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .skill-name {
