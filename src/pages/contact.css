@@ -118,3 +118,62 @@ body{
       overflow: hidden;
   }
   
+ /* For screens smaller than 768px */
+@media (max-width: 767px) {
+    .contact_field{
+      padding: 60px 40px 90px 40px;
+    }
+  
+    .contact_info_sec{
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+    
+    .map_bind {
+      margin-top: 50px;
+      border-radius: 0;
+      overflow: hidden;
+    }
+  
+    .right_conatct_social_icon {
+      height: auto;
+      padding: 50px 0;
+    }
+  
+    .contact_field h3 {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+    
+    .contact_field p {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  
+    .contact_field .form-control {
+      padding: 10px 0;
+    }
+  
+    .contact_field .form-control::placeholder {
+      font-size: 12px;
+    }
+  
+    button.contact_form_submit {
+      padding: 10px 0;
+      margin-top: 20px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+  
+    .socil_item_inner li a {
+      margin: 0px 10px;
+      font-size: 12px;
+    }
+  }
+  
