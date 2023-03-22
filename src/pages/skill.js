@@ -30,6 +30,16 @@ const skills = [
     name: 'Node.js',
     value: 70,
     color: '#3C873A'
+  },
+  {
+    name: 'Java',
+    value: 75,
+    color: '#00BFFF'
+  },
+  {
+    name: 'SQL',
+    value: 60,
+    color: '#3C873A'
   }
 ];
 const Skill = () => {

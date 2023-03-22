@@ -8,12 +8,12 @@ import 'react-slideshow-image/dist/styles.css'
 
 const projects = [ 
   { 
-  title: 'My Project',
+  title: 'Food Ordering Website',
   description: 'A project I created using React',
   image: require('../assests/p11.png'),
-  date: 'March 2023',
+  date: 'March 2022',
   technologies: 'React, JavaScript, HTML, CSS',
-  link: 'https://example.com/my-project'
+  link: 'https://tusharsawant.netlify.app/'
   },
   { 
     title: 'My Project',
@@ -21,7 +21,7 @@ const projects = [
     image: 'https://example.com/my-project-image.jpg',
     date: 'March 2023',
     technologies: 'React, JavaScript, HTML, CSS',
-    link: 'https://example.com/my-project'
+    link: 'https://tusharsawant.netlify.app/'
     },
 
 ]

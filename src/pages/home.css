@@ -74,11 +74,13 @@
   .about-text {
     width: 400px;
     text-align: left;
+    text-justify: inter-word;
   }
   
   .about-text p {
     font-size: 18px;
     margin-bottom: 30px;
+    text-justify:inter-word;
   }
   
   .about-text button {

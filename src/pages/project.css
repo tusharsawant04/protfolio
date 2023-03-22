@@ -1,79 +1,84 @@
-
-
-.flex-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-   
-    background-color: #282c34;
+.contact-page {
+  padding: 50px;
+  text-align: center;
 }
-.project-page {
-  
-    flex:1;
-    justify-content: space-between;
-    width: 75%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  
+
+.contact-page h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-page label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.contact-page input,
+.contact-page textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-page textarea {
+  height: 200px;
+}
+
+.contact-page input[type="submit"] {
+  width: 200px;
+  background-color: #0077FF;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.contact-page input[type="submit"]:hover {
+  background-color: #0050c8;
+}
+
+.social-links {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-page {
+    padding: 30px;
   }
-  
-  .project-header {
-    text-align: center;
+  .contact-page h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
   }
-  
-  .project-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  .contact-page form {
+    max-width: 400px;
   }
-  
-  .project-header p {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .project-image {
+  .social-links {
     margin-top: 30px;
   }
-  
-  .project-image img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+  .social-links a {
+    margin: 0 5px;
+    font-size: 20px;
   }
-  
-  .project-details {
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .project-details h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .project-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .project-details li {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .project-details li strong {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .project-details li a {
-    color: #0077FF;
-    text-decoration: none;
-  }
-  
+}
