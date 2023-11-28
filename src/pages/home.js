@@ -29,12 +29,12 @@ return (
             <img src={ts} alt="Profile Image" />
           </div>
           <div className="about-text">
-            <p>I am a final year student of computer engineering with a passion for software development and problem-solving. 
-              <br></br>During my studies,
+            <p>Hello, and thank you for taking the time to explore my portfolio!. Excited to share that I've graduated in computer engineering! 
+              <br></br>
                I have gained hands-on experience in various programming languages, data structures, algorithms, and software development tools.</p>
             <p> In my free time, I enjoy writing poetry to express my creativity and unwind after long coding sessions.<br></br>
                I am excited to apply my skills and knowledge to real-world problems and contribute to the development of innovative solutions..</p>
-            <p> Thank you for taking the time to visit my portfolio, and feel free to reach out if you have any questions or opportunities!</p>
+            <p> Thank you again for visiting my portfolio, and I look forward to any questions or opportunities that may arise!</p>
             <Link to="/contact">
             <button>Contact Me</button>
             </Link>
