@@ -11,6 +11,8 @@ import About from './pages/about';
 import Education from './pages/education';
 import Skill from './pages/skill';
 import Project from './pages/project';
+import BlogList from './pages/Bloglist';
+import DetailBlogPost from './component/DetailBlogPost';
 function App() {
   return (
     <>
@@ -24,6 +26,8 @@ function App() {
         <Route path="/education" element={<Education/>}/>
         <Route path="/skill" element={<Skill/>}/>
         <Route path="/project" element={<Project/>}/>
+        <Route path="/blog/:id" element={<DetailBlogPost/>} />
+        <Route path="/Bloglist" element={<BlogList/>}/>
           
         </Routes>
         

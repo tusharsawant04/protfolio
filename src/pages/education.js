@@ -63,8 +63,9 @@ class Education extends Component {
           <h2>Education Details</h2>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 ml-4">
             {this.state.education.map((edu) => (
-               <div className="col mb-4" key={edu.id}>
-              <div className="card ml-4 d-flex align-items-center">
+               <div className="customCard col mb-4" key={edu.id}>
+              <div className="card ml-4 d-flex align-items-center ">
+                
                 <div className="card-body">
                   <h3 className="card-title">{edu.degree}</h3>
                   <p className="card-text text-dark">{edu.university}</p>

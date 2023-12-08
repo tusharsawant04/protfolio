@@ -1,12 +1,7 @@
 
 import React, { useState,useRef  } from 'react';
-import Nav from 'react-bootstrap/Nav';
-import  NavLink from 'react-bootstrap/NavLink';
 import './navbar.css';
 import {Link} from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
-import Home from '../pages/home';
-
 const Navbar = () => {
 
   const [navActive, setNavActive] = useState(false);
@@ -57,8 +52,12 @@ const Navbar = () => {
           <Link to="/project" onClick={closeNavActive}>project</Link>
         </li>
         <li className="nav-item">
+          <Link to="/Bloglist" onClick={closeNavActive}>Blog</Link>
+        </li>
+        <li className="nav-item">
           <Link to="/contact" onClick={closeNavActive}>Contact</Link>
         </li>
+        
        
     
         

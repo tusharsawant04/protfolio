@@ -23,6 +23,10 @@
   align-items: center;
   width: 25%;
   transition: transform 0.5s ease-in-out;
+  @media (min-width: 768px) {
+    
+      margin-right: 3rem;
+  }
 }
 
 .nav-links li {
