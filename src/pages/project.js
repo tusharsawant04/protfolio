@@ -86,28 +86,35 @@ const projects = [
 
 const Project = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);
 
   const handleProjectClick = (index) => {
     setActiveProjectIndex(index);
+    setIsNavbarCollapsed(true);
     const projectElement = document.getElementById(`project-${index}`);
     projectElement.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const toggleNavbar = () => {
+    setIsNavbarCollapsed(!isNavbarCollapsed);
+  };
   return (
     <div className='container'>
-          <nav className="navbar1 sticky-top ">
-      {/* .  <div className="container-fluid"> */}
-          {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button> */}
-          {/* <div className=" navbar collapse navbar-collapse" id="navbarNav"> */}
-            <ul className="btn-group">
-              {projects.map((project, index) => (
-                <li key={index}>
-                  <button className={`btn-group__item ${activeProjectIndex === index ? 'active' : ''}`} onClick={() => handleProjectClick(index)}>{project.title}</button>
-                </li>
-              ))}
-            </ul>
      
+      <nav className="navbar navbar-expand-lg navbar-lite bg-lite sticky-top rounded">
+        <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            {projects.map((project, index) => (
+              <li key={index} className={`nav-item ${activeProjectIndex === index ? 'active' : ''}`}>
+                <button className="btn btn-link nav-link" onClick={() => handleProjectClick(index)}>{project.title}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      
    
       </nav>
 
