@@ -34,7 +34,7 @@ const projects = [
     link: 'https://tusharsawant.netlify.app/',
     GitHub:'https://github.com/tusharsawant04/D-Voting-',
     },
-    { 
+  { 
       title: 'fake product detection',
       description: 'A project I created using PHP HTML CSS SQL',
       images: [],

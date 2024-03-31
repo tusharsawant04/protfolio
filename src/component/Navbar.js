@@ -52,9 +52,9 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/project" onClick={closeNavActive}>project</Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link to="/Bloglist" onClick={closeNavActive}>Blog</Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link to="/contact" onClick={closeNavActive}>Contact</Link>
         </li>
