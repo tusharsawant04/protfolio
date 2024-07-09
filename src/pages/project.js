@@ -98,54 +98,51 @@ const Project = () => {
   const toggleNavbar = () => {
     setIsNavbarCollapsed(!isNavbarCollapsed);
   };
+
   return (
-    <div className='container'>
-     
-      <nav className="navbar navbar-expand-lg navbar-lite bg-lite sticky-top rounded">
-        <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            {projects.map((project, index) => (
-              <li key={index} className={`nav-item ${activeProjectIndex === index ? 'active' : ''}`}>
-                <button className="btn btn-link nav-link" onClick={() => handleProjectClick(index)}>{project.title}</button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      
-   
+    <div className='container mt-3'>
+      <nav className={`navbar-menu ${isNavbarCollapsed ? '' : 'show'}`}>
+        <ol>
+          {projects.map((project, index) => (
+            <li key={index} className={`nav-item ${activeProjectIndex === index ? 'active' : ''}`}>
+              <button className="btn btn-link nav-link" onClick={() => handleProjectClick(index)}>{project.title}</button>
+            </li>
+          ))}
+        </ol>
       </nav>
 
-    <div className="d-flex flex-wrap text-center">
       <div className="row">
-      {projects.map((project, index) => (
-         <div id={`project-${index}`} className={`card p-10 m-10 ${activeProjectIndex === index ? 'active' : 'inactive'}`} key={index}>
-          <div className="card-header">
-            <h1 className='font-weight-bold'>{project.title}</h1>
-            <p>{project.description}</p>
+        {projects.map((project, index) => (
+          <div id={`project-${index}`} className={`col-12 col-md-6 col-lg-4 mb-4`} key={index}>
+            <div className={`card h-100 ${activeProjectIndex === index ? 'active' : 'inactive'}`}>
+              <div className="card-header">
+                <h1 className='font-weight-bold'>{project.title}</h1>
+                <p>{project.description}</p>
+              </div>
+              <Carousel>
+                {project.images.map((image, idx) => (
+                  <Carousel.Item key={idx}>
+                    <img className="card-img d-block w-100" src={image} alt={`Slide ${idx}`} />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+              <div className="card-body">
+                <h2>Details</h2>
+                <ul>
+                  <li><strong>Date:</strong> {project.date}</li>
+                  <li><strong>Technologies:</strong> {project.technologies}</li>
+                  <li><strong>Link:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a></li>
+                  <li><strong>GitHub:</strong> <a href={project.GitHub} target="_blank" rel="noopener noreferrer">{project.GitHub}</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <Carousel>
-            {project.images.map((image, idx) => (
-              <Carousel.Item key={idx}>
-                <img className="card-img d-block w-100" src={image} alt={`Slide ${idx}`} />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-          <div className="card-body">
-            <h2>Details</h2>
-            <ul>
-              <li><strong>Date:</strong> {project.date}</li>
-              <li><strong>Technologies:</strong> {project.technologies}</li>
-              <li><strong>Link:</strong> <a  href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a></li>
-              <li><strong>Git Hub:</strong> <a href={project.GitHub} target="_blank" rel="noopener noreferrer">{project.GitHub}</a></li>
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-    </div>
+        ))}
+      </div>
+
+      <div className="floating-ball" onClick={toggleNavbar}>
+        ☰
+      </div>
     </div>
   );
 };

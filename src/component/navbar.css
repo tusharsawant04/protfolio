@@ -3,13 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  background-color: #333;
-  color: #f5ebeb;
-  position: fixed;
+  background-color: #ffffff; /* Background color white */
+  color: #333;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added shadow for attractiveness */
 }
 
 .logo img {
@@ -17,15 +18,14 @@
 }
 
 .nav-links {
-  color: #f5ebeb;
+  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 25%;
   transition: transform 0.5s ease-in-out;
   @media (min-width: 768px) {
-    
-      margin-right: 3rem;
+    margin-right: 3rem;
   }
 }
 
@@ -36,14 +36,14 @@
 .nav-links li a {
   display: block;
   text-align: center;
-  color: #fff9f9;
+  color: #0077b6; /* Primary blue color for links */
   text-decoration: none;
   padding: 0.5rem;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-  color: #0077b6;
+  color: #005f8a; /* Darker blue on hover */
 }
 
 .burger {
@@ -54,7 +54,7 @@
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #f5ebeb;
+  background-color: #333; /* Changed to match the color of the text */
   margin: 5px;
   transition: transform 0.3s ease-in-out;
 }
@@ -65,22 +65,63 @@
     right: 0;
     top: 0;
     height: 100vh;
-    width: 50%;
-    background-color: #2c2b2b;
-    
+    width: 75%; /* Adjusted width for better usability */
+    background-color: #ffffff; /* White background for consistency */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Added shadow for attractiveness */
+    z-index: 998; /* Ensure it's below the navbar */
   }
 
   .nav-links.nav-active {
     transform: translateX(0);
   }
 
+  .nav-links li {
+    margin: 1rem 0; /* Add spacing between menu items */
+  }
+
   .burger {
     display: block;
+    cursor: pointer;
+    z-index: 999; /* Ensure it’s above the nav-links */
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Color to match the navbar text */
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Optional: Styling the burger menu for better user interaction */
+  .burger div:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .burger div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .burger.active div:nth-child(1) {
+    transform: rotate(0);
+  }
+
+  .burger.active div:nth-child(2) {
+    opacity: 1;
+  }
+
+  .burger.active div:nth-child(3) {
+    transform: rotate(0);
   }
 }
+
